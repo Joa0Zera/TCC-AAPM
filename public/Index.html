@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAPM - Login</title>   
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="imagens/A.png" type="image/x-icon" style="height: 20px;">    
+
+    <!-- CSS Projeto-->
+    <link rel="stylesheet" href="css/indexCss.css">
+</head>
+<body>
+    <!-- TELA LOGIN -->
+    <div class="container">
+        <div class="imagem"></div>
+    
+        <div class="login">
+            <img class="imagem2" src="imagens/logo-removebg-preview.png" alt=""><br><!-- Imagem -->
+    
+            <h1>Bem-vindo!</h1>
+    
+            <!-- Formulário para Logar -->
+            <form onsubmit="event.preventDefault(); logar();">
+                <input type="text" placeholder="Usuário" id="usuario" required autofocus>
+                <input type="password" placeholder="Senha" id="senha" required>
+                <button type="submit" id="btnEntrar">Entrar</button>
+            </form> 
+        </div>
+    </div>
+
+    <!-- Modal Login -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+        
+            <!-- A imagem do erro será exibida aqui -->
+            <div class="erro-container">
+                <img id="imgErro" src="" alt="Erro">
+            </div>
+        
+            <p id="mensagemErro"></p>
+        </div>
+    </div>
+
+    <!-- JS Projeto-->
+    <script src="/script.js"></script>
+</body>
+</html>

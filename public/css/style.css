@@ -1,0 +1,780 @@
+/*******************************************/ /* Style Todas Páginas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+/* Main - Conteúdo */
+main {
+  flex: 1; /* Ocupará todo o espaço disponível */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Rodapé */
+.rodape {
+  flex-shrink: 0;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: #c8102e;
+}
+
+/*******************************************/ /* FIM Style Todas Páginas */
+
+/*******************************************/ /* Cabeçalho Geral*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+}
+
+hr {
+  border: 3px solid red;
+  /* 1E204E */
+}
+
+/* Logo Header */
+.logo img {
+  width: 120px;
+}
+
+/* Navegação Header */
+.nav-links {
+  display: flex;
+  gap: 50px;
+  align-items: baseline;
+}
+
+.nav-links a {
+  background-image: linear-gradient(to right, #091286, #091286 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 20px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  padding: 20px;
+}
+
+.nav-links a:hover {
+  background-color: white;
+  color: #a70f24;
+}
+
+.nav-links a::before {
+  content: "";
+  background: #091286;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  background-color: #f0f2f5;
+  border-radius: 5px;
+  background-position: 0;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+/* Fim Navegação Header */
+
+/* Hamburguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: black;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 650px) {
+  .containerBusca {
+    width: 90%;
+  }
+
+  .imgHeader {
+    width: 150px;
+    height: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+}
+
+/* Hamburguer */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    background-color: #a70f23ee;
+    width: 100%;
+    padding: 10px;
+    z-index: 1050;
+  }
+
+  .nav-links.menu-active {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    padding-left: 10px;
+    background-color: #a70f24 !important;
+    /* Garantir que a cor de fundo seja aplicada */
+    color: white !important;
+    /* Garantir que a cor do texto seja aplicada */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+  }
+
+  .dropdown-menu.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Links de navegação escondidos por padrão */
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #790f0ff6;
+    z-index: 10;
+    gap: 0px;
+    color: white;
+  }
+
+  /* Mostrar os links de navegação quando o menu hambúrguer for clicado */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+  }
+
+  /* Exibe o menu hambúrguer */
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+
+/******* fim hamburguer */
+
+/* nav */
+
+.header-container {
+  background-color: #fff;
+  padding: 7px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-icon img {
+  height: 40px;
+}
+
+header img {
+  width: 200px;
+  height: 50px;
+}
+
+/* Destaque Links Heades */
+.destaque a {
+  background-image: linear-gradient(to right, #86090f, #86090f 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 20px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  padding: 13px;
+  box-shadow: rgba(134, 9, 15, 0.24) 0px 3px 10px;
+}
+
+.destaque a::before {
+  content: "";
+  background: #86091a;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.destaque a:hover {
+  background-color: #f0f2f5;
+  border-radius: 5px;
+}
+
+.destaque a:hover {
+  background-position: 0;
+}
+
+.destaque a:hover::before {
+  width: 100%;
+}
+
+/* Fim Style Destaque Links Header */
+/* Fim Style Cabeçalho Geral*/
+
+/* Style Home P */
+.c1, .c2 {
+  display: flex;
+  margin: 0px 30px 0px 30px;
+  align-items: center;
+}
+
+.c1 div {
+  display: flex;
+  width: 300px;
+}
+
+.c1 div img, .c2 div img {
+  width: 100%;
+  width: 300px;
+}
+
+.c1 div img:hover, .c2 div img:hover {
+  scale: 1.1;
+  transform: 3s;
+}
+
+@media (max-width: 925px) {
+  .c1,.c2 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* buscas */
+
+.containerBusca {
+  background-color: #14478a;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 15px 15px 30px #000000;
+}
+
+.containerBusca form {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.containerBusca input {
+  width: 80%;
+  height: 30px;
+  background-color: #1e204e;
+  border: 2px solid #c8102e;
+  border-radius: 5px;
+  padding: 7px;
+  color: #ffffff;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.containerBusca button {
+  background-color: #c8102e;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 80%;
+  height: 40px;
+}
+
+.containerBusca button:hover {
+  background-color: #1e204e;
+  color: #c8102e;
+}
+
+.containerBusca tr,
+td,
+th {
+  border: #6d76c4 1px solid;
+  padding: 5px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+@media (max-width: 650px) {
+  .containerBusca {
+    width: 90%;
+  }
+
+  .containerBusca th.valores , td.resultadoValores{
+    display: none;
+  }
+
+  .imgHeader {
+    width: 150px;
+    height: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerBusca {
+    width: 100%;
+  }
+}
+
+/* fim busca */
+
+/* Style Tela Cadastro Patrimônio */
+
+.containerCadastro {
+  background-color: #14478a;
+  color: #ffffff;
+  box-shadow: 15px 15px 30px #000000;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 500px;
+  text-align: center;
+  width: 90%;
+}
+
+.containerCadastro form {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.containerCadastro a {
+  font-size: 2em;
+  text-align: center;
+  margin: 30px;
+}
+
+.containerCadastro input {
+  width: 80%;
+  height: 30px;
+  background-color: #1e204e;
+  border: 2px solid #c8102e;
+  border-radius: 5px;
+  padding: 7px;
+  color: #ffffff;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.containerCadastro button {
+  background-color: #c8102e;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 80%;
+  height: 40px;
+}
+
+.containerCadastro button:hover {
+  background-color: #1e204e;
+  color: #c8102e;
+}
+
+.containerCadastro tr,
+td,
+th {
+  border: #6d76c4 1px solid;
+  padding: 10px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+@media (max-width: 790px) {
+    .containerCadastro {
+      
+      flex-direction: column;
+    }
+  
+    .imgHeader {
+      width: 150px;
+      height: auto;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    nav a {
+      font-size: 14px;
+    }
+  }
+
+@media (max-width: 768px) {
+  .containerCadastro {
+    display: flex;
+  }
+}
+
+/* Fim Sttyle Tela Cadastro Patrimônio */
+
+/* Style Tela Controle Camisetas */
+
+.containerCadastros {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+.containerRegistro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cadAluno {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 30px #000000;
+  background-color: #14478a;
+  width: 700px;
+  margin-bottom: 15px;
+  /*max-width: 653px;
+  max-height: 735px;*/
+}
+
+h1, h2{
+  text-align: center;
+  color: white;
+}
+
+.formAluno label{
+  text-align: center;
+  color: white;
+}
+
+.formAluno input{
+  padding: 7px;
+}
+
+.cadAluno input{
+  width: 90%;
+  border-radius: 7px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #c82333;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 90%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #dc3545;
+}
+
+/**********************************************************************/
+
+.cadCamiseta, .tabelaAlunos{
+  display: flex;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 30px #000000;
+  background-color: #14478a;
+  width: 700px;
+}
+
+/* Tabela de estoque */
+.est {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #0d3c7a;
+}
+
+table {
+  width: 95%;
+  border-collapse: collapse;
+}
+
+.tabelaAlunos {
+  overflow-y: scroll;
+  flex-direction: column;
+}
+
+.tabelaAlunos th,
+td {
+  padding: 4px;
+  border-bottom: 1px solid #ddd;
+  color: white;
+}
+
+th {
+  border-bottom: 1px solid #ddd;
+  color: white;
+}
+
+/* Tabela de alunos */
+.tabelaAlunos h2 {
+  margin-bottom: 20px;
+}
+
+.tabelaAlunos img {
+  width: 30px;
+}
+
+@media (max-width: 1000px) {
+
+  .tabelaAlunos th,
+  td {
+    font-size: 9px;
+  }
+
+  .tabelaAlunos img {
+    width: 15px;
+  }
+
+  .containerCadastros {
+    flex-direction: column;
+  }
+}
+
+/* Coluna de ação (Editar/Deletar) */
+#tabelaAlunos .actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Fim Style Tela Controle Camisetas */
+
+/* Style Tela Relatório Total */
+
+.containerDados {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 630px;
+  border-radius: 20px;
+  box-shadow: 15px 15px 30px #000000;
+  padding: 10px;
+  background-color: #14478a;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .containerDados {
+    width: 90%;
+  }
+}
+
+.containerDados h1 {
+  text-align: center;
+}
+
+.containerDados table {
+  width: 100%;
+}
+
+.containerDados table,
+tr,
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#tabelaCorpo {
+  text-align: center;
+  width: 100%;
+}
+
+#tabelaCorpo button {
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+#tabelaCorpo button img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Modal relatório (ATUALIZAR) */
+.modal-relatorio {
+  text-align: center;
+  padding: 10px;
+}
+
+.modal-relatorio input {
+  background-color: gray;
+  border-radius: 7px;
+  padding: 5px;
+}
+form#formAtualizacao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+form#formAtualizacao .div-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.div-container div{
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content: center;
+}
+
+form#formAtualizacao {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form#formAtualizacao > div {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  form#formAtualizacao > div {
+    flex-wrap: wrap;  
+  }
+
+  .div-container > div {
+    width: 100%; 
+    margin-bottom: 10px; 
+    text-align: center; 
+  }
+}
+
+.button-relatorio {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  background-color: #14478a;
+  font-size: large;
+}
+
+.btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Fim Style Relatório Total */
+  
+/* Style Relatório Total PDF */
+.pdf h1{
+  color: black;
+}
+
+.containerPDF table, tr, th, td{
+  color: black;
+}
+
+/* Fim Style Relatório Total PDF */

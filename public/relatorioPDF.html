@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAPM - Relatório Patrimônios PDF</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="imagens/A.png" type="image/x-icon" style="height: 20px;">
+
+  <!-- CSS PROJETO -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body onload="getPDF()">
+    <!-- CABEÇALHO -->
+    <header>
+      <div class="row linksHeader" style="display: flex">
+        <a href="relatorioTP.html"
+          ><img
+            class="imgHeader"
+            src="imagens/logo-removebg-preview.png"
+            alt=""
+        /></a>
+      </div>
+    </header>
+
+    <hr />
+
+    <!-- MAIN - CONTEÚDO -->
+    <main class="pdf">
+      <h1>Dados Patrimônios Cadastrados</h1>
+      <br />
+
+      <div class="containerPDF">
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Descrição</th>
+            <th>Local</th>
+            <th>Status</th>
+            <th>Valor</th>
+          </tr>
+          <tbody id="tabelaCorpo"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+      <div>Copyright 2024 © Todos os direitos reservados.</div>
+    </footer>
+
+    <!-- JS PROJETO -->
+    <script src="/script.js"></script>
+  </body>
+</html>

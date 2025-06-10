@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAPM - Busca por NI</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="imagens/A.png" type="image/x-icon" style="height: 20px;">
+
+  <!-- CSS PROJETO -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- CABEÇALHO -->
+  <header>
+    <a href="homeP.html"><img class="imgHeader" src="imagens/logo-removebg-preview.png" alt="" /></a>
+
+    <!-- Navegação -->
+    <div class="nav-links">
+      <a href="homeP.html">Home</a>
+      <a href="cadastroPatrimonioP.html">Cadastro de Patrimônios</a>
+      <a href="controleCamisetas.html">Controle de Camisetas</a>
+      <a href="relatorioTP.html">Relatório Total</a>
+      <a href="buscaNI.html" class="destaque">Busca NI</a>
+      <a href="buscaDescriçao.html">Busca Descrição</a>
+      <a href="buscaLocal.html">Busca por Local</a>
+      <div class="destaque"><a href="Index.html">Sair</a></div>
+    </div>
+
+    <!-- Menu hambúrguer -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <hr />
+
+  <!-- MAIN - CONTEÚDO -->
+  <main>
+    <div class="containerBusca">
+      <strong style="font-size: 20px"> Buscar por NI </strong><br />
+      <input type="text" id="id_digitado" placeholder="Digite o NI:" /><br />
+
+      <table>
+        <tr>
+          <th>Descrição</th>
+          <th>Local</th>
+          <th>Status</th>
+          <th>Valor</th>
+        </tr>
+        <tbody id="resultado"></tbody>
+      </table>
+      <br />
+
+      <button onclick="buscarId()">Buscar</button>
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div>Copyright 2024 © Todos os direitos reservados.</div>
+  </footer>
+
+  <!-- JS PROJETO -->
+  <script src="/script.js"></script>
+</body>
+
+</html>

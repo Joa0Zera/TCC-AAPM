@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAPM - Relatório Patrimônios</title>
+
+    <link rel="shortcut icon" href="imagens/A.png" type="image/x-icon" style="height: 20px;">
+
+    <!-- CSS Alert Sweel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"/>
+
+    <!-- JS Alert Sweel -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+    <!-- CSS PROJETO -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body onload="tabelaPatrimonios()">
+    <!-- CABEÇALHO -->
+    <header>
+        <a href="homeP.html"><img class="imgHeader" src="imagens/logo-removebg-preview.png" alt=""></a>
+    
+        <!-- Navegação -->
+        <div class="nav-links">
+            <a href="homeP.html">Home</a>
+            <a href="cadastroPatrimonioP.html" class="destaque">Cadastro de Patrimônios</a>
+            <a href="controleCamisetas.html">Controle de Camisetas</a>
+            <a href="relatorioTP.html">Relatório Total</a>
+            <a href="buscaNI.html">Busca NI</a>
+            <a href="buscaDescriçao.html">Busca Descrição</a>
+            <a href="buscaLocal.html">Busca por Local</a>
+            <div class="destaque"><a href="Index.html">Sair</a></div>
+        </div>
+    
+        <!-- Menu hambúrguer -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <hr>
+
+    <!-- MAIN - CONTEÚDO -->
+    <main>
+        <a  href="relatorioPDF.html"><button class="btn">PDF</button></a>
+
+        <div class="containerDados">
+            <h1>Dados Patrimônios Cadastrados</h1><br>
+
+            <div style="overflow-y: scroll;">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descrição</th>
+                        <th>Local</th>
+                        <th>Status</th>
+                        <th>Valor</th>
+                        <th>Visualizar Imagem</th>
+                        <th>Atualizar</th>
+                        <th>Deletar</th>
+                    </tr>
+                    <tbody id="tabelaCorpo"></tbody>
+                </table>
+            </div> 
+
+            <!-- Modal para Atualização dos Dados-->
+            <div id="modal" id="modalAtt" style="display: none;">
+                <div class="modal-relatorio">
+                    <span class="close" onclick="fecharModal()">&times;</span><br>
+                    <h2>Atualizar Informações</h2><br>
+                    <form id="formAtualizacao">
+                        
+                        <div class="div-container">
+                            <div>
+                                <label for="descricao">Descrição:</label>
+                                <input type="text" id="descricaoModal" name="descricao" required>
+                            </div>
+                            <div>
+                                <label for="local">Local:</label>
+                                <input type="text" id="localModal" name="local" required>
+                            </div>
+                            <div>
+                                <label for="status">Status:</label>
+                                <input type="text" id="statusModal" name="status" required>
+                            </div>
+                            <div>
+                                <label for="valor">Valor:</label>
+                                <input type="text" id="valorModal" name="valor" required>
+                            </div>
+                        </div>
+
+                        <button class="button-relatorio" type="submit">Salvar</button>
+                    </form>
+                </div>
+            </div>  
+
+            <!-- Modal para Visualização da Imagem -->
+            <div id="modalimg" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8);">
+                <span onclick="fecharModal2()" style="color: white; cursor: pointer; position:absolute; top:20px; right:30px;">&times;</span>
+                <div style="display:flex; justify-content:center; align-items:center; height:100%;">
+                    <img id="modalImg" src="" alt="Imagem do Patrimônio" style="max-width:100%; max-height:100%; min-height: 400px; min-width: 400px">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div>Copyright 2024 © Todos os direitos reservados.</div>
+    </footer>
+
+    <!-- JS Projeto-->
+    <script src="/script.js"></script>
+</body>
+</html>

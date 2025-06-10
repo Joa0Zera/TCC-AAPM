@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAPM - Cadastro Patrimônio</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="imagens/A.png" type="image/x-icon">
+
+  <!-- CSS Alert Sweel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"/>
+
+  <!-- CSS PROJETO -->
+  <link rel="stylesheet" href="css/cadastroP.css">
+
+</head>
+<body>
+  <!-- CABEÇALHO -->
+  <header>
+    <a href="homeP.html"><img class="imgHeader" src="imagens/logo-removebg-preview.png" alt="Logo AAPM"></a>
+  
+    <!-- Navegação -->
+    <div class="nav-links">
+      <a href="homeP.html">Home</a>
+      <a href="cadastroPatrimonioP.html" class="destaque">Cadastro de Patrimônios</a>
+      <a href="controleCamisetas.html">Controle de Camisetas</a>
+      <a href="relatorioTP.html">Relatório Total</a>
+      <a href="buscaNI.html">Busca NI</a>
+      <a href="buscaDescriçao.html">Busca Descrição</a>
+      <a href="buscaLocal.html">Busca por Local</a>
+      <a href="Index.html" class="destaque">Sair</a>
+    </div>
+  
+    <!-- Menu hambúrguer -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <hr />
+
+  <!-- MAIN - CONTEÚDO -->
+  <main>
+    <div class="containerCadastro">
+      <h1>Cadastro Patrimônio</h1>
+      <br />
+      <form onsubmit="cadastroPatrimonio(event)">
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" required autofocus />
+
+        <label for="local">Local:</label>
+        <input type="text" id="local" required />
+
+        <label for="status">Status:</label>
+        <input type="text" id="status" required />
+
+        <label for="valor">Valor:</label>
+        <input type="text" id="valor" required />
+
+        <label for="img">Imagem:</label>
+        <input type="file" name="image" accept="image/*" id="img" />
+
+        <br />
+
+        <button type="submit" id="cadastroP">
+          Cadastrar
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div>Copyright 2024 © Todos os direitos reservados.</div>
+  </footer>
+
+  <!-- JS Alert Sweel -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <!-- JS PROJETO -->
+  <script src="/serverPatrimonio.js"></script>
+</body>
+</html>
